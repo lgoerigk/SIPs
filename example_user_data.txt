@@ -1,0 +1,4 @@
+System Functional SIE_estimate
+H   BLYP    0.00212423
+H2  BLYP    0.001642784
+H3  BLYP    -0.006341114
