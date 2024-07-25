@@ -1,0 +1,61 @@
+$molecule
+2 2
+Li 0.0000000 0.0000000 0.0000000
+$end
+$external_charges
+0.0000000 0.0000000 0.0000000 -2
+$end
+
+$rem
+JOBTYPE                 SP
+Method                  BLYP
+BASIS                   gen
+SCF_ALGORITHM           GDM_QLS
+XC_GRID                 000099000590
+THRESH                  14
+SCF_PRINT               1
+INCDFT                  0
+INCFOCK                 0
+SYMMETRY                FALSE
+SYM_IGNORE              TRUE
+$end
+
+$basis
+Li     0
+S   1   1.00
+    190.6916900              1.00000000D+00
+S   1   1.00
+     28.6055320              1.00000000D+00
+S   1   1.00
+      6.5095943              1.00000000D+00
+S   1   1.00
+      1.8412455              1.00000000D+00
+S   1   1.00
+      0.59853725             1.00000000D+00
+S   1   1.00
+      0.21397624             1.00000000D+00
+S   1   1.00
+      0.80316286D-01         1.00000000D+00
+P   1   1.00
+      2.29200000             1.00000000D+00
+P   1   1.00
+      0.83800000             1.00000000D+00
+P   1   1.00
+      0.29200000             1.00000000D+00
+D   1   1.00
+      2.06200000             1.00000000D+00
+D   1   1.00
+      0.66200000             1.00000000D+00
+F   1   1.00
+      1.39700000             1.00000000D+00
+****
+$end
+
+$ecp
+Li
+ECP_name 0 0
+first potential - gaussian exponent of 150.000 and a contraction coefficient of 1.000
+1
+2 150.000 1.000 FIRST ECP
+****
+$end
