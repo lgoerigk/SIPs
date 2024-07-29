@@ -22,9 +22,11 @@ To use either the O-SIPs or the S-SIPs first download the zip archive
 
 (1) Prepare your own .txt file
 It must be a .txt file, [unless you change the function "read_SIE_estimates" on line 80 of the function_definiton.R file]
+NOTE: please provide energies in Hartree
 
 This file must contain a header, and one of the header names must be: SIE_estimate
-Note this is case sensitive
+NOTE: the header "SIE_estimate" is case sensitive
+NOTE: please provide energies for the "SIE_estimate" in Hartree
 
 It can be placed at any column, but the header name must be defined exactly as the variable name defined in the function "predict_parameters" of the function_definition.R file
 
