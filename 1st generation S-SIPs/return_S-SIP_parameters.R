@@ -13,6 +13,10 @@ for (SIP_library in list_of_SIP_libraries) {
   
   #read dataset for desired SIP library
   raw.data <- read_SIP_library(dataset_name)
+
+  #calculate the deviation with respect to the S-SIP
+  raw.data$Deviation <- calculate_deviation(raw.data)
+  
   
   #fit the data to splines
   fitted_exponents <- exponent_fit_to_spline(raw.data, degrees_of_freedom)
