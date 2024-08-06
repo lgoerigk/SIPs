@@ -48,17 +48,17 @@ return(ecpData)
 ############
 
 
-############################################################ calculate_SIE
-calculate_SIE <- function(dataset){
-  SIE_values <- dataset$DFA_Energy - dataset$HF_Energy
-  return(SIE_values)
+############################################################ calculate_deviations
+calculate_deviation <- function(dataset){
+  deviation_values <- dataset$DFA_Energy - -0.4978590680 # H atom energy @ BLYP/def2-QZVPP (decontracted)
+  return(deviation_values)
 }
 ############
 
 
 ############################################################ exponent_fit_to_spline
 exponent_fit_to_spline <- function(dataset, degrees_of_freedom){
-  x=dataset$Energy
+  x=dataset$Deviation
   y=dataset$Exponent
   spline_fit <- lm(y~splines::bs(x, degree=1, intercept = FALSE, df = degrees_of_freedom))
   return(spline_fit)
@@ -68,7 +68,7 @@ exponent_fit_to_spline <- function(dataset, degrees_of_freedom){
 
 ############################################################ coefficient_fit_to_spline
 coefficient_fit_to_spline <- function(dataset, degrees_of_freedom){
-  x=dataset$Energy
+  x=dataset$Deviation
   y=dataset$Coefficient
   spline_fit <- lm(y~splines::bs(x, degree=1, intercept = FALSE, df = degrees_of_freedom))
   return(spline_fit)
