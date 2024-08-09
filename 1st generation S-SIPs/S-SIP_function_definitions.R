@@ -50,7 +50,7 @@ return(ecpData)
 
 ############################################################ calculate_deviations
 calculate_deviation <- function(dataset){
-  deviation_values <- dataset$DFA_Energy - -0.4978590680 # H atom energy @ BLYP/def2-QZVPP (decontracted)
+  deviation_values <- dataset$Energy - -0.4978590680 # H atom energy @ BLYP/def2-QZVPP (decontracted)
   return(deviation_values)
 }
 ############
